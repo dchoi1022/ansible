@@ -1,0 +1,5 @@
+---
+# defaults file for roles/stop_awx
+
+docker_compose_dir: '~/.awx/awxcompose'
+service_name: docker

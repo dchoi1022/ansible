@@ -1,0 +1,9 @@
+---
+- name: Starting docker compose
+  docker_compose:
+    project_src: "{{ docker_compose_dir }}"
+    restarted: yes
+  register: output
+
+- debug:
+    var: output

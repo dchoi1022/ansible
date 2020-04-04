@@ -1,0 +1,9 @@
+---
+- name: stop docker compose
+  docker_compose:
+    project_src: "{{ docker_compose_dir }}"
+    stopped: yes
+  register: output
+
+- debug:
+    var: output

@@ -1,0 +1,7 @@
+---
+- name: controlling AWX services
+  hosts: kleenex
+  gather_facts: no
+  become: true
+  roles:
+    - { role: "{{ playbook_dir }}" }

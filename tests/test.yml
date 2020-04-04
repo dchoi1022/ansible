@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  remote_user: root
+#  roles:
+#    - roles/stop_awx
+  gather_facts: no
+  vars:
+    docker_compose_dir: "~/.awx/awxcompose"
+  tasks:
+    - name: Stop AWX
+      docker_compose:
+        #project_src: "~/.awx/awxcompose"
+        project_src: "{{ docker_compose_dir }}"
+        #state: absent
+        #state: present
+        ##stopped: yes
+        restarted: yes
+      register: output
+
+    - debug:
+        var: output

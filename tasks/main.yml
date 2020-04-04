@@ -1,0 +1,11 @@
+---
+# tasks file for roles/stop_awx
+
+# stop AWX services
+
+- include_tasks: docker_stop.yml
+- include_tasks: service_stop.yml
+
+# start AWX services
+
+#- include_tasks: docker_start.yml
