@@ -1,6 +1,6 @@
 ---
 - name: controlling AWX services
-  hosts: kleenex
+  hosts: "{{ awx_target_hosts | default('none') }}"
   gather_facts: no
   become: true
   roles:
